@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Selkie</name>
+		<update version="0.2">
+		</update>
+	</info>
+
+	<element name="Selkie" type="Race" source="Homebrew" id="ID_RACE_SELKIE">
+		<description>
+			<p class="flavor">Selkies are fae creatures native to the ocean, and other salt water areas. They are comfortable in the deep sea and on land. While not necessarily beautiful, they are charismatic, clever, and agile, and are able to shift into their seal form with the use of their sealskin.</p>
+			<h4>PHYSICAL DESCRIPTION</h4>
+			<p>Selkies are seal-people; they resemble humans when not in their sealskin. They always have hair and eye colors that correspond with their seal form. For example, a Harbor Seal selkie would have tan to dark brown skin, darker brown or grey hair, and many freckles or beauty marks on their body. Most, if not all Selkies have dark eyes, which again corresponds to their Seal form. Since selkies do mate with humans, however, there can be hints of the human parentage or ancestry in their physical appearance, like red hair or lighter-colored eyes. Male and female selkies alike are usually lean, as it is hard for this race to put on a lot of muscle mass.</p>
+			<h4>SELKIE PERSONALITY</h4>
+			<p>Selkies are usually calm, unless they are required to fight. Female selkies are often more capable of controlling their emotions, making them natural leaders of the tribes. Male selkies are able to channel their rage in battle, making them great fighters and the like. Selkie men and women are free-spirited and open minded, but they value honor and “pod” greatly. (Pod can usually be translated as pack or family. Selkies do not see a lot of difference between male and female, aside from physical.</p>
+			<h4>SELKIE HABITAT</h4>
+			<p>Selkies are mostly present on the shore of tropical islands and coastal regions. Many of them can be found underwater as well. They are almost always nomadic and thus have very little tie to the land in the way that other species might.</p>
+			<h4>SELKIE SOCIETY</h4>
+			<p>Selkies are welcomed by most other water creatures, and maintain friendly relation with them. They have deep caution towards Cyclops, Goliath Pandas, Gnolls, Minotaurs, Tigerfolks and Wolffolks, as these are the natural predators of selkies in their seal form. They get along in the wild and most often wild-oriented races. They treat humans with caution as well, for the fact that humans often stole sealskins from unsuspecting selkies, making them unable to go back into the ocean.</p>
+			<h4>SELKIE NAMES</h4>
+			<p>Wild Selkies often give their child a short, simple name, if they give them a name at all. Selkies raised on the land usually have names that deal with water, or aquatic life in general.</p>
+			<ul class="unstyled">
+				<li><strong>Wild:</strong> Sey, Sho, Illi, Mae, Koo</li>
+				<li><strong>Land:</strong> Storm, River, Coral, Seafoam</li>
+			</ul>
+			<h4>SELKIE TRAITS</h4>
+			<p>The following traits are shared by player characters who are selkie.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Wisdom score increases by 1, and your Charisma score increases by 2.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Despite their sylvan nature, selkies age at the same rate as humans, reaching adulthood in their late teens and live less than a century.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Selkies live for freedom, both for themselves and others. Most selkie tend toward chaotic and good alignments, but neutral selkie are not uncommon.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Selkies full-figured and shorter than typical humans, ranging from 4′ 6″-5’6″. Your size is medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet in human form.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Your sylvan ancestry has adapted your physiology to both the twilight realms and the depths of the ocean. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Shapechanging.</em></strong> As an action, you can magically assume the shape of a seal. Your seal form is as unique as your human form and cannot be changed. While in seal form, you follow the same rules as a druid using the Wild Shape class feature. In addition, when you change shape from seal to human form, you shed your seal skin and must keep it safe and secure. As long as you have your seal skin in your possession, you may use your shapechanging ability at will and may maintain your seal form indefinitely. Without your seal skin you may not use your shapechanging abilities until the skin is retrieved, you are the target of a greater restoration, heal, regenerate, or wish spell, or you regenerate the skin after a year and a day.</p>
+			<p class="indent"><strong><em>Aquatic Grace.</em></strong> Even in human form, you are as at home in the water as you are on land. Swimming does not cost you extra movement. You can hold your breath for a number of minutes equal to your Constitution score and may double any proficiency bonus you are allowed on Athletics checks to swim.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and either Aquan or Sylvan.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">Akmenos, Amnon, Barakas, Damakos, Ekemon, Iados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai</set>
+			<set name="names" type="female">Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta</set>
+			<set name="names" type="virtue">Art, Carrion, Chant, Creed, Despair, Excellence, Fear, Glory, Hope, Ideal, Music, Nowhere, Open, Poetry, Quest, Random, Reverence, Sorrow, Temerity, Torment, Weary</set>
+			<set name="names-format">{{name}} “{{virtue}}”</set>
+			<set name="height" modifier="2d8">4'9"</set>
+			<set name="weight" modifier="2d4">110 lb.</set>
+		</setters>
+		<rules>
+			<stat name="wisdom" value="1" requirements="!ID_INTERNAL_GRANTS_SELKIE_SUBRACE" />
+			<stat name="charisma" value="2" requirements="!ID_INTERNAL_GRANTS_SELKIE_SUBRACE"/>
+			<stat name="innate speed" value="30" bonus="base"/>
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_SHAPECHANGING" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_AQUATIC_GRACE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_EXTRA_LANGUAGE" />
+		</rules>
+	</element>
+	<element name="Shapechanging" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SHAPECHANGING">
+		<description>
+			<p>As an action, you can magically assume the shape of a seal. Your seal form is as unique as your human form and cannot be changed. While in seal form, you follow the same rules as a druid using the Wild Shape class feature. In addition, when you change shape from seal to human form, you shed your seal skin and must keep it safe and secure. As long as you have your seal skin in your possession, you may use your shapechanging ability at will and may maintain your seal form indefinitely. Without your seal skin you may not use your shapechanging abilities until the skin is retrieved, you are the target of a greater restoration, heal, regenerate, or wish spell, or you regenerate the skin after a year and a day.</p>
+		</description>
+		<sheet>
+			<description>As an action, you can magically assume the shape of a seal.</description>
+		</sheet>
+	</element>
+	<element name="Aquatic Grace" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_AQUATIC_GRACE">
+		<description>
+			<p>Even in human form, you are as at home in the water as you are on land. Swimming does not cost you extra movement. You can hold your breath for a number of minutes equal to your Constitution score and may double any proficiency bonus you are allowed on Athletics checks to swim..</p>
+		</description>
+		<sheet>
+			<description>Even in human form, you are as at home in the water as you are on land. Swimming does not cost you extra movement. You can hold your breath for a number of minutes equal to your Constitution score and may double any proficiency bonus you are allowed on Athletics checks to swim.</description>
+		</sheet>
+	</element>
+</elements>
